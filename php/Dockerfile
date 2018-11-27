@@ -20,8 +20,7 @@ libxml2-dev \
 libmemcached-dev \
 zlib1g-dev
 
-# use postgresql
-RUN docker-php-ext-install pdo pdo_pgsql pgsql zip opcache soap bcmath \
+RUN docker-php-ext-install pdo pdo_mysql pdo_pgsql pgsql zip opcache soap bcmath \
 && docker-php-ext-install -j$(nproc) iconv \
 && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
 && docker-php-ext-install -j$(nproc) gd

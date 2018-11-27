@@ -38,7 +38,7 @@ services:
             PGADMIN_DEFAULT_PASSWORD: myproject
 
     mysql:
-        image: mysql:latest
+        image: mysql:5.7
         volumes:
             - ./mysql:/var/lib/mysql
         environment:
